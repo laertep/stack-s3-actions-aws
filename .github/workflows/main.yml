@@ -1,1 +1,22 @@
+name: CI
 
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+   - users: actions/checkkout@v2
+   
+   - name: Build bucket
+     env:
+      aws_access_key: ${{ secrets.aws_access_key }}
+      aws_secret_key: ${{ secrets.aws_secret_key }}
+    run: |
+      
+     
