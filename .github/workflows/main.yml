@@ -1,18 +1,10 @@
-name: S3
-
 on:
   push:
     branches: [ main ]
 
   pull_request:
     branches: [ main ]
-    
- env:
-   aws_bucket_name: buckets3laerte
-   aws_access_key: ${{ secrets.aws_access_key }}
-   aws_secret_key: ${{ secrets.aws_secret_key }}
-   aws_region: us-east-1
-    
+  
 jobs:
  build:
     runs-on: ubuntu-latest
@@ -20,7 +12,13 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
     
- - name: Deploy S3
+ env:
+   aws_bucket_name: buckets3laerte
+   aws_access_key: ${{ secrets.aws_access_key }}
+   aws_secret_key: ${{ secrets.aws_secret_key }}
+   aws_region: us-east-1
+    
+  - name: Deploy S3
     uses: jakejarvis/s3-sync-acton@master
     with:
        args: --acl public-read --follow-symlinks --delete
