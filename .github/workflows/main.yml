@@ -1,6 +1,5 @@
 name: S3
 on: [push]
-
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
