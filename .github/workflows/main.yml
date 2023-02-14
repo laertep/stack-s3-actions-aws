@@ -1,5 +1,11 @@
 name: S3
-on: [push]
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
