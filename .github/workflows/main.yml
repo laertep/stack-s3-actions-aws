@@ -20,7 +20,7 @@ jobs:
        
     - name: terraform running
       repository: laertep/stack-s3-actions-aws
-      path: .github/workflows/s3.tf
+      path: ./s3.tf
       
       env:
        aws_bucket_name: buckets3laerte
