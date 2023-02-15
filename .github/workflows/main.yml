@@ -13,12 +13,12 @@ jobs:
     - uses: actions/setup-node@v3
     
     
-  - name: Deploy S3
+    - name: Deploy S3
     uses: jakejarvis/s3-sync-acton@master
     with:
       args: --acl public-read --follow-symlinks --delete 
       
- env:
+    env:
    aws_bucket_name: buckets3laerte
    aws_access_key: ${{ secrets.aws_access_key }}
    aws_secret_key: ${{ secrets.aws_secret_key }}
