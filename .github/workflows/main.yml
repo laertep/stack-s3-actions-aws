@@ -19,7 +19,6 @@ jobs:
        args: --acl public-read --follow-symlinks --delete 
        
     - name: terraform running
-      repository: laertep/stack-s3-actions-aws
       path: ./s3.tf
       
       env:
