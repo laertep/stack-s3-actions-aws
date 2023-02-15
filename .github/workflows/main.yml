@@ -16,7 +16,7 @@ jobs:
     - name: Deploy S3
       uses: actions/checkout@v3
       with:
-       repository: laertep/aws-s3-cloud
+       repository: laertep/stack-s3-actions-aws
        args: --acl public-read --follow-symlinks --delete 
        
     - name: terraform running
