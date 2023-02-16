@@ -5,10 +5,12 @@ terraform {
     region = "us-east-1"
     
   }
-    provider "aws" {
+}
+
+provider "aws" {
     access_key = "<enter-your-correct-access-key>"
     secret_key = "<enter-your-correct-secret-key>"
   } 
 
- }
-}
+ 
+
