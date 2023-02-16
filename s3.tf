@@ -9,17 +9,11 @@ terraform {
  
 
 provider "aws" {
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
-  region = "${var.region}"
+  access_key = "AKIA5YCGQBPO53QZ23WR"
+  secret_key = "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"
+  
 }
 
-variable "access_key" {
-  default = "<hidden_for_stack_exchange_post>"
-}
 
-variable "secret_key" {
-  default = "<hidden_for_stack_exchange_post>"
-}
  
 
