@@ -55,6 +55,7 @@ data "aws_iam_policy_document" "allow_access_from_another_account" {
   }
 }
 
+
 resource "aws_kms_key" "keyweb" {
   description             = "Encryption Bucket - websitelaerte"
   deletion_window_in_days = 7
