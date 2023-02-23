@@ -8,10 +8,14 @@ terraform {
 }
 
 
-#provider "aws" {
- # region  = "us-east-1"
-  #shared_config_files = "~/.aws/config"
-#}
+terraform {
+  backend "s3" {
+    bucket = "laerteterraform"
+    key    = "apicep/terraform.tfstat"
+    region = "us-east-1"
+  }
+}
+
 
 
 
