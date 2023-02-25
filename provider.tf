@@ -8,13 +8,13 @@ terraform {
 }
 
 
-terraform {
-  backend "s3" {
-    bucket = "laerteterraform"
-    key    = "apicep/terraform.tfstat"
-    region = "us-east-1"
-  }
-}
+#terraform {
+ # backend "s3" {
+  #  bucket = "laerteterraform"
+   # key    = "apicep/terraform.tfstat"
+    #region = "us-east-1"
+  #}
+#}
 
 
 
