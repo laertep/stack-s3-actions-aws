@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "terraformlaerte"
+    bucket = "terraformlaertes3"
     key    = "apicep/terraform.tfstate"
     region = "us-east-1"
   }
@@ -8,12 +8,12 @@ terraform {
 
 
 
-resource "aws_s3_bucket" "terraformlaerte" {
-  bucket = "terraformlaerte"
+resource "aws_s3_bucket" "terraformlaertes3" {
+  bucket = "terraformlaertes3"
 }
 
-resource "aws_s3_bucket_public_access_block" "terraformlaerte" {
-  bucket = aws_s3_bucket.terraformlaerte.id
+resource "aws_s3_bucket_public_access_block" "terraformlaertes3" {
+  bucket = aws_s3_bucket.terraformlaertes3.id
 
   block_public_acls       = false
   block_public_policy     = false
